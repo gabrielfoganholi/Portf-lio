@@ -21,7 +21,7 @@ header{
     align-items: center;
     justify-content: space-between;
     padding: 33px 9%;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(4, 44, 90, 0.6);
 }
 
 
@@ -314,8 +314,8 @@ section{
         position: absolute;
         top: 100%;
         right: -100%;
-        width: 150px;
-        height: 25vh;
+        width: 200px;
+        height: 30vh;
         background: #042c5a;
         display: flex;
         border-radius: 10%;
