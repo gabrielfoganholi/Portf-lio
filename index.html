@@ -1,108 +1,223 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Gabriel Foganholi</title>
+    <link rel="icon" type="image/x-icon" href="./img/fot.png">
 
-    <link rel="stylesheet" 
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" 
-    rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" 
-    rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
     <header>
-        <a href="#" class="logo">Portfólio</a>
-
-        <ul class="navlist">
-            <li><a href="#sobre-mim">Quem sou eu?</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#me-encontre">Me encontre</a></li>
-        </ul>
-
-        <div class="bx bx-menu" id="menu-icon"></div>
+        <div class="container">
+            <div class="header-content">
+                <img src="./img/sua-foto.jpg" alt="Gabriel Foganholi" class="profile-img">
+                <div class="header-text">
+                    <h1>Gabriel Foganholi</h1>
+                    <p>Desenvolvedor Front-End</p>
+                    <a href="#contato" class="btn-contact">Entre em Contato</a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Gabriel Moraes Foganholi</h1>
-            <P>Aprendizado contínuo: minha jornada como estudante de Análise e Desenvolvimento de Sistemas</P>
-            <a href="#sobre-mim" >Saiba mais</a>
-        </div>
-
-        <div class="retrato-img">
-            <img src="./img/retrato.png">
-        </div>
-
-        </div>
-
-        <div class="icons">
-            <a href="https://www.instagram.com/gabrielfoganholi"><i class="ri-instagram-line"></i></a>
-            <a href="https://www.linkedin.com/in/gabriel-foganholi-193b42213/"><i class="ri-linkedin-box-fill"></i></a>
-            <a href="https://www.github.com/gabrielfoganholi"><i class="ri-github-line"></i></a>
-        </div>
-
-        <div class="scroll-down">
-            <a href="#sobre-mim"><i class="ri-arrow-down-s-fill"></i></a>
+    <section id="perfil" class="section">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>
+                Sou estudante de Análise e Desenvolvimento de Sistemas na Faculdade Fundação Santo André (2° semestre). Tenho habilidades em HTML, CSS, JavaScript, além de experiência com Git para versionamento de código e Figma para design de interfaces. Também tenho conhecimento em Adobe Illustrator, pacote Office e Canva, o que amplia minha capacidade de criar designs e documentos profissionais. Meu inglês avançado me permite acessar uma vasta gama de recursos técnicos. Estou em constante aprendizado para aprimorar minhas habilidades e contribuir com soluções inovadoras. Tenho também conhecimento intermediário em espanhol, o que adiciona flexibilidade a projetos quando necessário.
+            </p>
         </div>
     </section>
 
-    <section class="sobre-mim" id="sobre-mim">
-        <div class="sobre-mim-text">
-          <br><br><h2>Sobre mim</h2><br>
-          <p>Me chamo Gabriel Moraes Foganholi, tenho 19 anos e estudo Análise e Desenvolvimento de Sistemas na Faculdade Fundação Santo André. Adquiri conhecimentos em HTML, CSS e lógica de programação por meio de cursos na Alura e tutoriais online. Participei de uma imersão em Python, onde aprendi a analisar dados com Pandas e criar visualizações com Matplotlib.
-
-Na faculdade, destaco o aprendizado em Excel, PowerBI e DevOps, além de experiências práticas com AWS, onde criei servidores e projetos bem avaliados. Estou me aprofundando em FrontEnd, especialmente em desenvolvimento responsivo. Sou fluente em inglês, com habilidades em leitura, audição e melhoria constante na conversação. Possuo conhecimento intermediário no pacote Office e domínio avançado do Canva.
-
-Atualmente, trabalho na administração de uma escola, desempenhando diversas funções. Meu interesse por tecnologia começou enquanto trabalhava como ilustrador digital, necessitando de um site para meu portfólio. Desde então, estou dedicado a me tornar um desenvolvedor.</p>
+    <section id="projetos" class="section">
+        <div class="container">
+            <h2>Projetos</h2>
+            <div class="gallery">
+                <a href="https://gabrielfoganholi.github.io/Pokedex/" class="gallery-item" target="_blank">
+                    <img src="./img/proj_pokemon.png" alt="Projeto 1" class="project-image">
+                    <p class="project-title">Pokedex</p>
+                </a>
+                <a href="https://colab.research.google.com/github/gabrielfoganholi/previsao_series_temporais_acoes_carreiras_dados/blob/main/previsao_series_temporais_acoes_carreiras_dados.ipynb" class="gallery-item" target="_blank">
+                    <img src="./img/proj_Previsão de Séries Temporais para Análise de Ações e Carreiras (2).png" alt="Projeto 2" class="project-image">
+                    <p class="project-title">Previsão de Séries Temporais para Análise de Ações e Carreiras</p>
+                </a>
+                <a href="https://colab.research.google.com/github/gabrielfoganholi/colab_pandas_graficos_analises/blob/main/colab_pandas_graficos_analises.ipynb#scrollTo=Rs2anvIXcTqD" class="gallery-item" target="_blank">
+                    <img src="./img/PANDAS.png" alt="Projeto 3" class="project-image">
+                    <p class="project-title">Gráficos e Análises com Google Colab e Python Pandas</p>
+                </a>
+                <a href="https://colab.research.google.com/github/gabrielfoganholi/Candlestick_Matplotlib/blob/main/Gr%C3%A1ficos_Candlestick_Matplotlib.ipynb" class="gallery-item" target="_blank">
+                    <img src="./img/MATPLOTLIB.png" alt="Projeto 4" class="project-image">
+                    <p class="project-title">Criando Gráficos de Candlestick com Matplotlib</p>
+                </a>
         </div>
-      </section><br>
+    </section>
+    
+    
 
-    <section class="projetos" id="projetos">
-        <div class="projetos-text">
-          <h2>Projetos</h2><br>
-          <p>Aqui estão alguns dos meus projetos disponíveis no GitHub:</p><br>
-    <ul>
-      <li><a href="https://github.com/gabrielfoganholi/colab_pandas_graphs_analysis/blob/58bb67f8d5b23b16629167a8282537e410c6b657/colab_pandas_graficos_analises.ipynb">Data Analysis with Google Colab and Pandas</a></li>
-      <li><a href="https://github.com/gabrielfoganholi/Candlestick_Matplotlib/blob/be8dc4026b30a3f8aa4a3d3b195cb385579f3e6a/Gr%C3%A1ficos_Candlestick_Matplotlib.ipynb">Creating Candlestick Charts with Matplotlib</a></li>
-      <li><a href="https://github.com/gabrielfoganholi/forecast_time_series_stocks_careers_data/blob/3195bc517ddf56c1d836941670abaf9fb35294e2/previsao_series_temporais_acoes_carreiras_dados.ipynb">Forecasting Time Series of Stocks and Careers in the Data Market</a></li>
-        <li><a href="https://gabrielfoganholi.github.io/Pokedex/">Pokedex</a></li>
-    </ul>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skills-item">
+                    <h3>HTML</h3>
+                    <p>Experiência sólida na criação de páginas web.</p>
+                </div>
+                <div class="skills-item">
+                    <h3>CSS</h3>
+                    <p>Habilidades avançadas em design responsivo e estilização.</p>
+                </div>
+                <div class="skills-item">
+                    <h3>JavaScript</h3>
+                    <p>Desenvolvimento de funcionalidades dinâmicas e interativas.</p>
+                </div>
+                <div class="skills-item">
+                    <h3>Figma</h3>
+                    <p>Criação e prototipagem de interfaces de usuário.</p>
+                </div>
+                <div class="skills-item">
+                    <h3>Illustrator</h3>
+                    <p>Design gráfico e criação de vetores.</p>
+                </div>
+                <div class="skills-item">
+                    <h3>Git</h3>
+                    <p>Controle de versão e colaboração em projetos.</p>
+                </div>
+                <div class="skills-item">
+                    <h3>Canva</h3>
+                    <p>Design de materiais gráficos e apresentações.</p>
+                </div>
+                <div class="skills-item">
+                    <h3>Chat GPT</h3>
+                    <p>Utilização de IA para aprimorar processos e ideias.</p>
+                </div>
+                <div class="skills-item">
+                    <h3>VS Code</h3>
+                    <p>Editor de código avançado e personalizável.</p>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-    <section class="me-encontre" id="me-encontre">
-        <div class="me-encontre-text">
-          <h2>Me encontre</h2><br>
-          <p> Essas são minhas Redes Sociais: </p>
-            
-        </div><br><br>
-      </section>
+    <section id="certificados" class="section">
+        <div class="container">
+            <h2>Certificados</h2>
+            <div class="certificates-container">
+                <div class="certificate-item">
+                    <a href="https://cursos.alura.com.br/certificate/85cdfffc-b447-4e78-af5c-966d09194448?lang" target="_blank">
+                        <img src="./img/cert_git.png" alt="Certificado 1" class="certificate-image">
+                    </a>
+                    <p class="certificate-title"><i>Git e GitHub: da Alura!</i></p>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://cursos.alura.com.br/certificate/a781ab5e-94bf-4a14-b89f-b01dc9ee4c7a?lang" target="_blank">
+                        <img src="./img/cert_ux.png" alt="Certificado 2" class="certificate-image">
+                    </a>
+                    <p class="certificate-title"><i>UX Design: entenda a área da User Experience</i></p>
+                </div>
+                <!-- Add more certificates -->
+                <div class="certificate-item">
+                    <a href="https://cursos.alura.com.br/certificate/459be895-7143-4c32-9579-342f76a9e906?lang" target="_blank">
+                        <img src="./img/cert_Arquitetura de computadores.png" alt="Certificado 3" class="certificate-image">
+                    </a>
+                    <p class="certificate-title"><i>Arquitetura de computadores: por trás de como seu programa funciona</i></p>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://cursos.alura.com.br/certificate/a24ab441-0faf-4b81-b3bc-e1f927e9f4ee?lang" target="_blank">
+                        <img src="./img/cert_sixsigma.png" alt="Certificado 4" class="certificate-image">
+                    </a>
+                    <p class="certificate-title"><i>Lean Six Sigma: um guia para melhoria de processos</i></p>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://cursos.alura.com.br/certificate/7a551f39-e460-484b-99d0-c971877fd255?lang" target="_blank">
+                        <img src="./img/cert_htmlcss1.png" alt="Certificado 5" class="certificate-image">
+                    </a>
+                    <p class="certificate-title"><i>HTML e CSS: Classes, posicionamento e Flexbox</i></p>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://cursos.alura.com.br/certificate/2df9e244-fab4-433f-880c-e5cf297533f0?lang" target="_blank">
+                        <img src="./img/cert_htmlcss2.png" alt="Certificado 6" class="certificate-image">
+                    </a>
+                    <p class="certificate-title"><i>HTML e CSS: ambientes de desenvolvimento, estrutura de arquivos e tags</i></p>
+                </div>
+                <div class="certificate-item">
+                    <a href="https://cursos.alura.com.br/certificate/975854b5-f4b6-49cb-825d-ede6cc8365a4?lang" target="_blank">
+                        <img src="./img/cert_htmlcss3.png" alt="Certificado 7" class="certificate-image">
+                    </a>
+                    <p class="certificate-title"><i>HTML5 e CSS3 parte 1: crie uma página da Web</i></p>
+                </div>
+                <div class="certificate-item">
+                    <a href="link-para-certificado8.pdf" target="_blank">
+                        <img src="./img/cert_python.png" alt="Certificado 8" class="certificate-image">
+                    </a>
+                    <p class="certificate-title"><i>A Imersão Python: Do Excel à Análise de Dados</i></p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    
 
-      <footer>
-        <ul class="social-icons">
-          <li><a href="https://www.instagram.com/gabrielfoganholi"><i class="ri-instagram-line" style="color: white;"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/gabriel-foganholi-193b42213/"><i class="ri-linkedin-box-fill" style="color: white;"></i></a></li>
-          <li><a href="https://www.github.com/gabrielfoganholi"><i class="ri-github-line" style="color: white;"></i></a></li>
-        </ul>
-      </footer><br><br>
-      
-      
+    <section id="contato" class="section">
+        <div class="container">
+            <h2>Contato</h2>
+            <div class="contact-buttons">
+                <a href="https://wa.me/5511962726400" target="_blank" class="contact-button" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://github.com/gabrielfoganholi" target="_blank" class="contact-button" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/gabrielfoganholi/" target="_blank" class="contact-button" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:gabrielfoganholi@hotmail.com" class="contact-button" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/gabriel-foganholi-193b42213/" target="_blank" class="contact-button" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <a href="./docs/cv.pdf" class="btn-download" download>Baixe meu Currículo</a>
+        </div>
+    </section>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Gabriel Foganholi. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-    <script src="script.js"></script>
+    <script src="path/to/your/javascript/file.js"></script>
 </body>
 </html>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Selecione todos os links internos
+        const links = document.querySelectorAll('a[href^="#"]');
+
+        links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Impede o comportamento padrão do link
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
+

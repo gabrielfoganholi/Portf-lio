@@ -1,0 +1,542 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fontes */
+body {
+    position: relative; /* Necessário para o posicionamento do pseudo-elemento */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    z-index: 1; /* Garante que o conteúdo fique acima da imagem */
+    
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Para que cubra toda a viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/background.jpg); /* Caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Mantém a imagem no lugar ao rolar a página */
+    opacity: 35%; /* Defina a opacidade da imagem */
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+    pointer-events: none; /* Evita interferência na interação com o conteúdo */
+}
+/* Container principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cabeçalho */
+header {
+    position: relative;
+    height: 500px;
+    color: #333;
+    text-align: center;
+    overflow: hidden;
+    padding: 30px 0;
+}
+
+.header-content {
+    position: relative;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border: 4px solid #333;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1);
+}
+
+.header-text h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: -1px; /* Ajusta o espaçamento entre letras */
+}
+
+.header-text p {
+    font-size: 1.6em;
+    color: #666;
+    line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+}
+
+/* Botões */
+.btn-contact, .btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+}
+
+.btn-contact:hover, .btn-download:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
+.btn-contact:focus, .btn-download:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* Seções */
+.section {
+    padding: 80px 0;
+}
+
+h2 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase; /* Maiúsculas */
+    letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #333;
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    margin-bottom: 12px;
+    color: #666;
+    font-size: 1.1em;
+    line-height: 1.5; /* Ajusta o espaçamento entre linhas */
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skills-item {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skills-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.skills-item h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skills-item p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Certificados */
+.certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.certificate-item {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.certificate-title {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    .certificate-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .header-text h1 {
+        font-size: 2.5em;
+    }
+
+    .header-text p {
+        font-size: 1.2em;
+    }
+
+    .skills-item {
+        width: 180px;
+    }
+
+    .gallery-item {
+        min-width: 150px;
+        max-width: 200px;
+    }
+
+    .btn-contact {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .btn-download {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .contact-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2em;
+    }
+
+    #menu {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .header-text h1 {
+        font-size: 2em;
+    }
+
+    .header-text p {
+        font-size: 1em;
+    }
+
+    .skills-item {
+        width: 150px;
+    }
+
+    .gallery-item {
+        min-width: 120px;
+        max-width: 150px;
+    }
+
+    .btn-contact {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    .btn-download {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .contact-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1em;
+    }
+}
+
+/* Seção de Minha História */
+#historia {
+    color: #333;
+}
+
+#historia h2 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+#historia p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align:left
+}
+/* Seção de Galeria de Projetos */
+.gallery {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Garante que a cor do texto seja a mesma definida no CSS */
+}
+
+.gallery-item img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #333;
+}
+
+.project-title {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Efeito hover */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .gallery-item {
+        min-width: 180px;
+    }
+
+    .gallery-item img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .project-title {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        min-width: 150px;
+    }
+
+    .gallery-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .project-title {
+        font-size: 0.8em;
+    }
+}
+
+
+/* Seção de Contato */
+#contato {
+    text-align: center;
+    padding: 80px 0;
+}
+
+#contato h2 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+.contact-button i {
+    margin: 0;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 2px solid #444;
+}
+
+/* Menu responsivo */
+.hidden {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.menu-toggle .bar {
+    background-color: #333;
+    height: 4px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg);
+    margin: 5px 0;
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    margin: 5px 0;
+}
+
+#menu {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#menu li {
+    display: block;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#menu a:hover {
+    background-color: #f2f2f2;
+}
